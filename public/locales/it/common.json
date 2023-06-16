@@ -1,0 +1,9 @@
+{
+    "Empty": "",
+    "title": "Stampa certificati di qualità",
+    "formTitle": "Cerca ordine",
+    "inputPlaceholder": "scrivi numero ordine",
+    "ordersTitle" : "Lista ordini",
+    "supplier" : "ONDAPLAST SPA",
+    "printBtn" : "Stampa"
+}

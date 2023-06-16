@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Orders {
+  id                      Int       @id(map: "PK_Orders")
+  orderNumber             String    @db.VarChar(10)
+  orderPartNumber         String?   @db.VarChar(5)
+  orderJobNumber          String?   @db.VarChar(1)
+  customerNumber          String?   @db.VarChar(20)
+  customerName            String?   @db.VarChar(255)
+  itemNumber              String?   @db.NVarChar(40)
+  checklistId             Int?
+  itemOrderedQuantity     Int?
+  supplierLotNumber       String    @db.VarChar(10)
+  customerItemReference   String?   @db.VarChar(200)
+  customerItemDescription String?   @db.VarChar(100)
+  thickness               Float?
+  grammage                Float?
+  width                   Int?
+  length                  Int?
+  height                  Int?
+  color                   String?   @db.VarChar(50)
+  deliveryCustomerName    String?   @db.VarChar(100)
+  deliveryAddress         String?   @db.VarChar(100)
+  deliveryCity            String?   @db.VarChar(100)
+  printdate               DateTime? @db.Date
+  thicknessTolerance      String?   @db.NVarChar(15)
+  grammageTolerance       String?   @db.NVarChar(15)
+  widthTolerance          String?   @db.NVarChar(15)
+  lengthTolerance         String?   @db.NVarChar(15)
+  heightTolerance         String?   @db.NVarChar(15)
+}
+
+model sysdiagrams {
+  name         String @db.NVarChar(128)
+  principal_id Int
+  diagram_id   Int    @id(map: "PK__sysdiagr__C2B05B61E19A13E7") @default(autoincrement())
+  version      Int?
+  definition   Bytes?
+
+  @@unique([principal_id, name], map: "UK_principal_name")
+}

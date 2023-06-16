@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.14.1",
+    "@remix-run/css-bundle": "^1.16.0",
+    "@remix-run/node": "^1.16.0",
+    "@remix-run/react": "^1.16.0",
+    "@remix-run/serve": "^1.16.0",
+    "fs-server": "^0.0.4",
+    "i18next": "^22.5.0",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-fs-backend": "^2.1.2",
+    "i18next-http-backend": "^2.2.1",
+    "isbot": "^3.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.3.1",
+    "remix-i18next": "^5.1.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.16.0",
+    "@remix-run/eslint-config": "^1.16.0",
+    "@types/accept-language-parser": "^1.5.3",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.38.0",
+    "prisma": "^4.14.1",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
